@@ -16,7 +16,7 @@ const Proyecto = (props) => {
       <img className='cardProyectoImg' src={props.imgProyecto} alt="captura de la pagina del proyecto" />
       <div className='cardProyecto-links-proyecto'>
         <BotonConEnlace
-          nombre={'Ver código fuente'}
+          nombre={'Código fuente'}
           url={props.urlGithub}
           img={githubImg}
         />

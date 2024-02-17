@@ -11,7 +11,7 @@ a {
 }
 
 body {
-  background-color: #111111e6;
+  background-color: rgba(3, 7, 18, 0.85);
   color: #ffffff;
 }
 
@@ -19,6 +19,7 @@ body {
 
 .header {
   position: fixed;
+  min-width: 370px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -46,20 +47,29 @@ body {
   transform: scale(1.1);
 }
 
-
-
+.header p.active {
+  color: #d7d4ff;
+  color: rgb(255, 255, 0, 0.8);
+}
 
 /* Home */
 
 .home {
+  min-width: 360px;
   padding: 0px 15px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .containerInfo {
   padding-top: 200px;
   padding-bottom: 100px;
   max-width: 670px;
+  min-width: 370px;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -72,21 +82,24 @@ body {
   border-radius: 100%;
 }
 
-
-.containerInfo-nombre {
+.disponible {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 
-.containerInfo-nombre h1 {
+h1 {
   font-size: 48px;
 }
 
 .containerInfo-nombre-trabajo {
-  /* background-color: #efeefb; */
-  color: rgb(0, 0, 0, 0.8);
+  color: #000000;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
   width: 200px;
   padding: 5px 10px;
   border-radius: 50px;
@@ -112,14 +125,17 @@ body {
 .containerInfo-links {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   gap: 15px;
+}
+
+.info-links {
   height: 40px;
 }
 
-.containerInfo-links a {
+.info-links a {
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 10px;
   background-color: rgb(0, 0, 0, 0.3);
@@ -129,11 +145,11 @@ body {
   transition: transform 0.2s ease-in-out;
 }
 
-.containerInfo-links a:hover {
+.info-links a:hover {
   transform: scale(1.1);
 }
 
-.containerInfo-links-img {
+.info-links-img {
   width: 20px;
   height: 20px;
 }
@@ -166,7 +182,7 @@ body {
 
 /* CardProyecto */
 
-.cardProyecto{
+.cardProyecto {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -174,18 +190,21 @@ body {
 
 }
 
-.proyectoNombre{
+.proyectoNombre {
   color: rgb(255, 255, 0, 0.8);
 }
 
-.cardProyecto-links-proyecto{
+.cardProyecto-links-proyecto {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
 
-.cardProyectoImg{
+.cardProyectoImg {
   border-radius: 5px;
+  min-width: 350px;
+  max-width: 620px;
+  width: 100%;
 }
 
 /* sobre mi */
@@ -200,30 +219,60 @@ body {
   padding-bottom: 100px;
 }
 
-.sobremiTitulo{
+.sobremiTitulo {
   padding: 10px 0px;
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
 
-.sobremiTitulo img{
+.sobremiTitulo img {
   width: 30px;
 }
 
-.containerSobreMi-descripcion{
+.containerSobreMi-descripcion {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
 }
 
-.containerSobreMi-descripcion p{
-  width: 400px;
+.containerSobreMi-descripcion p {
+  width: 80%;
   line-height: 1.5rem;
 }
 
-.containerSobreMi-descripcion img{
+.containerSobreMi-descripcion img {
   width: 256px;
-  border-radius: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 2px #d7d4ff;
+  transform: rotate(-5deg);
+}
+
+@media (max-width:820px) {
+
+  .containerSobreMi-descripcion {
+    padding-top: 20px;
+    flex-direction: column-reverse;
+  }
+
+}
+
+@media (max-width:495px) {
+
+  h1 {
+    font-size: 37px;
+  }
+
+  .containerInfo {
+    padding-top: 120px;
+    padding-bottom: 50px;
+  }
+
+  .containerInfo-links {
+    padding-top: 5px;
+    justify-content: center;
+  }
+
 }

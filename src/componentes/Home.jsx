@@ -26,7 +26,7 @@ const Home = () => {
     },
     {
       nombre: 'areyprada@gmail.com',
-      url: 'https://www.linkedin.com/in/sebastianrey94',
+      url: 'mailto: areyprada@gmail.com',
       img: mailIco
     },
   ]
@@ -34,14 +34,16 @@ const Home = () => {
   return (
     <div className='home'>
       <div id='contacto' className='containerInfo'>
-        <img className='fotoPerfil-mini' src={fotoPerfil} alt="" />
-        <div className='containerInfo-nombre'>
-          <h1>Hola, Soy Sebastián</h1>
-          <a href="https://www.linkedin.com/in/sebastianrey94" target="_blank"><p className='containerInfo-nombre-trabajo'>Disponible para trabajar</p></a>
+        <div className='disponible'>
+          <img className='fotoPerfil-mini' src={fotoPerfil} alt="" />
+          <a href="mailto: areyprada@gmail.com" target="_blank"><p className='containerInfo-nombre-trabajo'>Disponible para trabajar</p></a>
         </div>
-        <p className='containerInfo-descripcion'>
-          Desarrollador full stack, <span>FrontEnd React y BackEnd Java.</span> De Bucaramanga, Colombia.
-        </p>
+        <h1>Hola, Soy Sebastián</h1>
+        <div className='containerInfo-descripcion'>
+          <p>
+            Desarrollador full stack, <span>FrontEnd React y BackEnd Java.</span> De Bucaramanga, Colombia.
+          </p>
+        </div>
         <div className='containerInfo-links'>
           {iconosContacto.map((contacto, index) => (
             <BotonConEnlace
@@ -75,7 +77,7 @@ const Home = () => {
         </div>
         <div className='containerSobreMi-descripcion'>
           <p>
-            Soy tecnólogo empresarial y graduado de la carrera deCertified Tech Developer en Digital House, a lo largo de lacursada he adquirido y puesto en practica misconocimientos en Java, Spring Boot, React, JavaScript, CSS,HTML5, MySQL, Git, GitHub, testing en los diversos trabajos propuestos haciendo uso de la metodología Agile y SCRUM, dando relevancia a escribir un código limpio y comprensible, esencial para entregar un buen software.
+            Soy tecnólogo empresarial y graduado de la carrera de Certified Tech Developer en Digital House, a lo largo de la cursada he adquirido y puesto en practica mis conocimientos en Java, Spring Boot, React, JavaScript, CSS3, HTML5, MySQL, Git, GitHub, testing en los diversos trabajos propuestos haciendo uso de la metodología Agile y SCRUM, dando relevancia a escribir un código limpio y comprensible, esencial para entregar un buen software.
           </p>
           <img src={fotoPerfil} alt="" />
         </div>

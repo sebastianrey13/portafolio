@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Header = () => {
+  const [activeItem, setActiveItem] = useState(null);
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -9,15 +10,31 @@ const Header = () => {
         top: section.offsetTop,
         behavior: 'smooth',
       });
+      setActiveItem(sectionId);
     }
   };
 
   return (
     <div className='header'>
       <nav>
-        <p onClick={() => scrollToSection('proyectos')}>Proyectos</p>
-        <p onClick={() => scrollToSection('sobre-mi')}>Sobre mí</p>
-        <p onClick={() => scrollToSection('contacto')}>Contacto</p>
+        <p
+          className={activeItem === 'proyectos' ? 'active' : ''}
+          onClick={() => scrollToSection('proyectos')}
+        >
+          Proyectos
+        </p>
+        <p
+          className={activeItem === 'sobre-mi' ? 'active' : ''}
+          onClick={() => scrollToSection('sobre-mi')}
+        >
+          Sobre mí
+        </p>
+        <p
+          className={activeItem === 'contacto' ? 'active' : ''}
+          onClick={() => scrollToSection('contacto')}
+        >
+          Contacto
+        </p>
       </nav>
     </div>
   );
