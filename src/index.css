@@ -207,6 +207,31 @@ h1 {
   width: 100%;
 }
 
+.cardProyecto-skills-usadas{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.tecnologias-usadas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* width: 100px; */
+  gap: 5px;
+  background-color: rgb(0, 0, 0, 0.3);
+  padding: 4px 8px 4px 5px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.tecnologias-usadas-img {
+  width: 20px;
+  height: 20px;
+}
+
+
 /* sobre mi */
 
 .containerSobreMi {
